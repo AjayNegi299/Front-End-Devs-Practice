@@ -11,8 +11,8 @@ JavaScript DOM manipulation
 UI interactions and components
 Clean and readable code writing
 
-##🎯 Why This Repo?
+## 🎯 Why This Repo?
 I learn best by doing. So I’m building things as I go — breaking stuff, fixing it, and learning along the way. This repo tracks my growth and helps me stay consistent.
 
-##🚀 Learning in Progress…
+## 🚀 Learning in Progress…
 I’ll keep updating this repo with more projects and exercises as I learn new things.
