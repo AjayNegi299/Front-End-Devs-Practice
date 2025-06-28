@@ -25,48 +25,46 @@ const question = [{
 
 let index = 0
 let right = 0
-let wrong = question.length
+let wrong = 0
 const total = question.length
-const quesbox = document.getElementById('quebox')
-const optionbox = document.querySelectorAll('.option')
-const submitButton = document.querySelector('.btn')
-
-const quesLoader=()=>{ 
+const quesBox = document.getElementById('quebox')
+const optionbox = document.querySelectorAll('.option') 
+const submitButton = document.querySelector('button')
+const QuizLoaders=()=>{
     if(index===total){
-        return endQuiz()
+        return quizEnd()
     }
     reset()
-    const data = question[index]
-    quesbox.innerHTML = `${index + 1}) ${data.ques}`
+    let data = question[index]    
+    quesBox.innerHTML = `${data.ques}`
     const option = [data.a,data.b,data.c,data.d]
     optionbox.forEach((ele,index)=>{
         ele.nextElementSibling.innerHTML = option[index]
     })
 }
 
-const checkedAnswer =()=>{
+const checkedAnswer=()=>{
     const ans = getAnswer()
     const data = question[index]
-    if(ans === data.correct){
+    if(ans===data.correct){
         right++
     }
     else{
         wrong++
     }
     index++
-    quesLoader()
+    QuizLoaders()
     return
 }
-
 const getAnswer =()=>{
+     let answer = null
     optionbox.forEach((input)=>{
         if(input.checked){
-            answer = input.value;
+           answer = input.value;
         }
     })
     return answer
 }
-
 submitButton.addEventListener('click', checkedAnswer)
 
 const reset = ()=>{
@@ -74,13 +72,9 @@ const reset = ()=>{
         input.checked = false
     })
 }
-
-const endQuiz = ()=>{
-    document.getElementById('box').innerHTML = `
-    <h3>Thank you for Complete this Quiz</h3>
-    <h2>${right}/${wrong} is correct</h2>
-    `
+const quizEnd=()=>{
+     document.getElementById('box').innerHTML =`
+    <h3>Thank you for giving this quiz</h3>
+    <h2>${right}/${total} is correct</h2>`
 }
-
-
-quesLoader()
+QuizLoaders()
