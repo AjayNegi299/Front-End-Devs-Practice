@@ -1,0 +1,53 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container {
+  /* background-color: ; */
+  padding: 2rem;
+}
+.main input {
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  padding-inline: 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  box-shadow: 0 0.2px 4px 0.5px black;
+  background-color: rgb(241, 38, 38);
+  cursor: pointer;
+  color: white;
+}
+.main button:hover {
+  background-color: rgb(231, 72, 72);
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style-type: disc; /* ✅ Enables bullet points */
+  padding-left: 20px; /* ✅ Adds space to show bullets */
+}
+.taskCheckbox {
+  width: 2rem;
+}
+li {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.taskCheckbox {
+  margin-right: 10px;
+}
