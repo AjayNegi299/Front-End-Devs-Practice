@@ -1,32 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Menu Bar</title>
     <!--======Css Linking=========-->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <!--======== Link icons =========-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
-
-</head> 
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--===== Headers =====-->
     <header class="header">
-        <nav class="nav container">
-            <div class="nav-data">
+      <nav class="nav container">
+        <div class="nav-data">
+            <a class="nav__logo"> <i class="ri-planet-line"></i> Company </a>
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-fill nav__close"></i>
+          </div>
+        </div>
+        <!--============= nav Menu ================-->
 
-            <!--===== Nav Menu =====-->
-            <div class="nav__menu" id="nav-menu">
-                <a class="nav__logo">
-                    <i class="ri-planet-line"></i> Company
-                </a>
-                 </div>
-            <div class="nav__toggle" id="nav-toggle">
-                <i class="ri-menu-line nav__burger"></i>
-                <i class="ri-close-fill nav__close"></i>
-            </div> 
-            </div>   
-        </nav>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#" class="nav__link">Company</a></li>
+
+         <!--============= DropDown 1 ================-->
+
+            <li class="dropdown-item">
+              <div class="nav__link">
+                Analytics <i class="ri-arrow-down-line Dropdown__arrow"></i>
+              </div>
+            </li>
+            <li><a href="#" class="nav__link">Products</a></li>
+
+        <!--============= DropDown 1 ================-->
+
+            <li class="dropdown-item">
+              <div class="nav__link">
+                User <i class="ri-arrow-down-line Dropdown__arrow"></i>
+              </div>
+            </li>
+            <li><a href="#" class="nav__link"></a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
