@@ -1,6 +1,6 @@
-const showMenu = (toggleId,navId)=>{
-    const toggle = document.getElementById(toggleId)
-    const nav = document.getElementById(navId)
+const showMenu = (navId,toggleId)=>{
+    const toggle = document.getElementById(navId),
+    nav = document.getElementById(toggleId)
 
     toggle.addEventListener('click',()=>{
         nav.classList.toggle('show-menu')
@@ -8,4 +8,4 @@ const showMenu = (toggleId,navId)=>{
     })
 }
 
-console.log( showMenu('nav-toggle','nav-menu'))
+showMenu('nav-toggle','nav-menu')

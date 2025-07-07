@@ -1,172 +1,171 @@
 /*====== google fonts =======*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 /*====== Variable CSS =======*/
-:root{
-    --header-height: 3.5rem;
+:root {
+  --header-height: 3.5rem;
 
-    /*====== Color ======*/
-    /*Color mode HSL(hue, saturation, lightness*/
-    --black-color: hsl(220,24%,12%);
-    --black-color-light: hsl(220,24%,15%);
-    --black-color-lighten: hsl(220,20%,18%);
-    --white-color: #fff;
-    --body-color: hsl(220,100%,97%);
+  /*====== Color ======*/
+  /*Color mode HSL(hue, saturation, lightness*/
+  --black-color: hsl(220, 24%, 12%);
+  --black-color-light: hsl(220, 24%, 15%);
+  --black-color-lighten: hsl(220, 20%, 18%);
+  --white-color: #fff;
+  --body-color: hsl(220, 100%, 97%);
 
-    /*======= Font and typrography =======*/
-    /* .5rem = 8px  | 1 rem = 16px */
-    --body-font: "Montserrat", sans-serif;
-    --normal-font-size: .938rem;
+  /*======= Font and typrography =======*/
+  /* .5rem = 8px  | 1 rem = 16px */
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: 0.938rem;
 
-    /*======= Font weight =======*/
-    --font-regular: 400;
-    --font-semi-bold: 600;
+  /*======= Font weight =======*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
 
-    /*======= Font weight =======*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
+  /*======= Font weight =======*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
 }
 
-
 /*======= responsive Typography =======*/
-@media screen and (min-width: 1024px){
-    :root{
-        --normal-font-size: 1rem
-    }
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
 }
 
 /*======= Base =======*/
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body{
-    font-size: var(--normal-font-size);
-    font-family: var(--body-font);
-    background-color:var(--body-color) ;
+body {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  background-color: var(--body-color);
 }
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
-a{
-    text-decoration: none;
-}
-
-.container{
-    width: 100vw;
-    padding-inline: 1.5rem;
+a {
+  text-decoration: none;
 }
 
-/*======== Header ===========*/
-
-header{
-    position: fixed;
-    left: 0;
-    top: 0;
-    background-color: var(--black-color);
-    box-shadow: 0 2px 16px hsla(200,32%,8%, .3);
-    z-index: var(--z-fixed);
+.container {
+  width: 100vw;
+  padding-inline: 1.5rem;
 }
 
 /*======== Header ===========*/
-.nav{
-    height: var(--header-height);
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: var(--black-color);
+z-index: var(--z-fixed);
+box-shadow: 1px 1px 1px 4px rgb(37, 36, 36);
 }
 
+/*======== Nav ===========*/
+nav{
+  height: var(--header-height);
+}
 .nav__logo,
-.nav__burger,
+.nav__burgur,
 .nav__close{
-    color: var(--white-color);
+  color: var(--white-color);
 }
+
 .nav-data{
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav__logo{
-    display: inline-flex;
-    align-items: center;
-    column-gap: .25rem;
-    font-weight: var(--font-semi-bold);
-}
-.nav__logo i{
-    font-weight: initial;
-    font-size: 1.2rem;   
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  font-weight: var(--font-semi-bold);
 }
 .nav__toggle{
-    position: relative;
-    width: 32px;
-    height: 32px; 
+  position: relative;
+  width: 32px;
+  height: 32px;
 }
-.nav__burger,
+.nav__burgur,
 .nav__close{
-    position: absolute;
-    width: max-content;
-    height: max-content;
-    inset: 0;
-    margin: auto;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: opacity .1s, transfrom .4s;
-
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transform: opacity .3s tramsform .4s;
 }
+
 .nav__close{
-    opacity: 0;
+  opacity: 0;
 }
 
-/* Navigation for Mobile devices*/
-
-@media screen and (max-width: 1118px) {
-    .nav__menu{
+@media screen and (max-width: 1118px){
+  .nav__menu{
     position: absolute;
     left: 0;
     top: 2.5rem;
     width: 100%;
-    height: calc(100vh - 3.5rem);
+    background-color: grey;
+    height: calc(100vh -3.5rem);
     overflow: auto;
     pointer-events: none;
     opacity: 0;
-    transition: top .4s, opacity .3s ;
-    }
-    .nav__menu::-webkit-scrollbar{
-        width: 0;
-    }
-    .nav__list{
-        background-color: var(--black-color);
-        padding-top: 1rem;
-    }
-   
+    transition: top .4s opacity .3s;
+  }
+  .nav__link::-webkit-scrollbar{
+    width: 0;
+  }
+  .nav__list{
+    background-color: var(--black-color); 
+    padding-top: 1rem;
+  }
 }
-.nav__link{
+  .nav__link{
     color: var(--white-color);
     background-color: var(--black-color);
     font-weight: var(--font-semi-bold);
-    padding: 1.2rem 1rem;
+    padding: 1.25rem 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: background-color .3s;
-}
-.nav__link:hover{
+  }
+  .nav__link:hover{
     background-color: var(--black-color-light);
-}
+  }
 
-/* show menu*/
-.show-menu{
-    opacity: 1;
-    top: 3.5rem;
-    pointer-events: initial;
-}
 
-/* show icon*/
-.show-icon .nav__burger{
+  .show-menu{
+  opacity: 1;
+  top: 3.5rem;
+  cursor: pointer;
+  }
+  .show-icon .nav__burgur{
     opacity: 0;
-    transform: rotate(90);
-}
-.show-icon .nav__close{
+    transform: rotate(90deg); 
+   }
+
+  .show-icon .nav__close{
     opacity: 1;
-    transform: rotate(90);
+    transform: rotate(90deg);
+  }
+
+/*======== Dropdown ===========*/
+
+.dropdown__item{
+  cursor: pointer ;
 }
