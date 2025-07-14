@@ -1,0 +1,36 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  gap: 2rem;
+  margin: 2rem;
+  justify-content: center; 
+}
+.box1,.box2{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 2rem;
+    width: 800px;
+    height: 600px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+    overflow: hidden;
+
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    font-size: 2rem;
+    color: white;
+    border: 1px solid black;
+}
