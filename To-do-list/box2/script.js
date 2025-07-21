@@ -1,25 +1,34 @@
 const todoList = []
+const inputElement = document.querySelector('input')
+const buttonElement = document.querySelector('button')
+const TodoRenderElement = document.querySelector('div')
 
-renderTodo()
-function renderTodo(){
-    let TodoHTML = ''
-for (let i = 0; i < todoList.length; i++) {
-    const Todo = todoList[i];
-    const html = `<p>${Todo}</p>`
-    TodoHTML += html
+function renderTodoList(){
+    let todoListStore = ''
+    for (let i = 0; i < todoList.length; i++) {
+        const todo = todoList[i]
+        const html = `
+        <p>
+        ${todo}
+        <button class = 'delete-button'>Delete</button>
+        </p>
+        `
+        
+
+        todoListStore += html
+    }
+    TodoRenderElement.innerHTML = `${todoListStore}`
+    console.log(todoListStore);
 }
- document.querySelector('div').innerHTML = `${TodoHTML}`
-
-}
 
 
-const ButtonElement = document.querySelector('button')
-const inputElement = document.querySelector('input');
+
 function addTodo(){
-    const names = inputElement.value;
-    todoList.push(names)
+    const taskName = inputElement.value
+    todoList.push(taskName)
+    console.log(todoList);
     inputElement.value = ''
-    renderTodo()
-    
+    renderTodoList()
 }
-ButtonElement.addEventListener('click',addTodo)
+
+buttonElement.addEventListener('click',addTodo)

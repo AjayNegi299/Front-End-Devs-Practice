@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    
+}
+body{
+    background-color: rgb(31, 30, 30);
+    margin: 2rem;
+    color: white;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 300px 250px 200px;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+button{
+    padding-inline: 1rem;
+    padding-block: 0.2rem;
+    background-color: red;
+    border: none;
+    color: white;
+    font-weight: 700;
+}
+.add-button{
+    background-color: rgb(5, 138, 234);
+} 
+
+.todo-grid {
+    display: grid;
+    grid-template-columns: 300px 250px 200px;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
