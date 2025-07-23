@@ -1,6 +1,10 @@
 const url = 'https://newsapi.org/v2/everything?q='
 const API_Key = '56e9648859ec4a9fbd52a01c3c898cf1'
 
+function reload(){
+    window.location.reload()
+}
+
 window.addEventListener('load',()=>{
     fetchNews('India')
 })

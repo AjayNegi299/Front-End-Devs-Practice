@@ -52,6 +52,7 @@ nav {
     background-color: black;
     padding: 8px;
     border-radius: 0.5rem;
+    cursor: pointer;
 }
 
 .search-bar{
