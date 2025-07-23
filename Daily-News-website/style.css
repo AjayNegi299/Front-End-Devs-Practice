@@ -10,14 +10,13 @@ body{
 }
 ul{
     list-style: none;
-    gap: 1rem;   
+    gap: 1rem; 
+    color: black;
+    cursor: pointer;  
 }
-
-a{
-   text-decoration: none; 
-   color: black;
+ul > li{
+    font-weight: bold;
 }
-
 nav {
     background-color: #f3faff;
     box-shadow: 0 0 4px #bbd0e2;
@@ -26,6 +25,10 @@ nav {
     z-index: 99;
     left: 0;
     right: 0;
+}
+
+.nav-item.active{
+    color: red;
 }
 .container {
     max-width: 1280px;
@@ -69,6 +72,9 @@ nav {
 .search-button:hover{
     background-color: rgb(29, 121, 177);
 }
+
+
+
 
 .main-content {
     margin-top: 80px;

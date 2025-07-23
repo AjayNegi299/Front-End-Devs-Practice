@@ -38,4 +38,29 @@ function fillDataInCardS(cardClone,article){
         timeZone: "Asia/Jakarta"
     }) 
     newsSource.innerHTML = `${article.source.name} ${date}`
+
+    cardClone.firstElementChild.addEventListener('click',()=>{
+        window.open(article.url,"_blank")
+    })
 }
+
+let curSelectedItem = null
+function onNavItem(id){
+    fetchNews(id)
+    const navItem = document.getElementById(id)
+    curSelectedItem?.classList.remove('active')
+    curSelectedItem = navItem
+    curSelectedItem.classList.add('active')
+
+}
+
+const searchButton = document.getElementById('search-button')
+const searchInput = document.getElementById('search-input')
+
+searchButton.addEventListener('click',()=>{
+    const query = searchInput.value
+    if(!query) return
+    fetchNews(query)
+    curSelectedItem?.classList.remove('active')
+    curSelectedItem = null
+})
